@@ -1,8 +1,10 @@
-import { Elysia } from "elysia";
-import routes from "./routes";
+import { Elysia } from 'elysia';
+import { swagger } from '@elysiajs/swagger';
+import routes from './routes';
 
 const app = new Elysia();
 app
+    .use(swagger())
     .group("/api", (app) => app.use(routes))
     .listen(3000);
 

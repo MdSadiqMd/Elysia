@@ -3,7 +3,7 @@ import routes from "./routes";
 
 const app = new Elysia();
 app
-    .group("/", (app) => app.use(routes))
+    .group("/api", (app) => app.use(routes))
     .listen(3000);
 
 console.log(
